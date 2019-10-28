@@ -1,0 +1,38 @@
+{
+  "name": "Prueba",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
+    "react": "16.9.0",
+    "react-native": "0.61.2",
+    "react-native-camera": "^3.8.0",
+    "react-native-permissions": "^2.0.3",
+    "react-native-qrcode-scanner": "^1.2.3",
+    "react-native-qrcode-svg": "^5.2.0",
+    "react-native-router-flux": "^4.0.6",
+    "react-native-svg": "^9.13.2",
+    "react-native-vector-icons": "^6.6.0",
+    "styled-components": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.6.4",
+    "@babel/runtime": "7.6.3",
+    "@react-native-community/eslint-config": "0.0.3",
+    "babel-jest": "24.9.0",
+    "eslint": "6.5.1",
+    "jest": "24.9.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
