@@ -1,15 +1,20 @@
 import React from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, TouchableOpacity} from 'react-native';
 import QrReader from '../../views/QrReader';
-import Files from '../../views/Files';
 import { Router, Stack, Scene, Actions } from 'react-native-router-flux';
 import { StyledIcon } from './styled';
 import DrawerContent from '../DrawerContent';
+import Home from '../../views/Home';
 const App: () => React$Node = () => {
 
-  const handleLeftButton = () => {
+  const handleLeftButton = () => (
+    <TouchableOpacity onPress={() => Actions.drawerOpen()} >
+      <StyledIcon name="menu" />
+    </TouchableOpacity>
+  );
 
-  }
+
+  
   return (
     <>
         <StatusBar backgroundColor="#002984" barStyle="light-content"/>
@@ -20,19 +25,21 @@ const App: () => React$Node = () => {
               contentComponent = {DrawerContent} 
               drawerWidth = {250} 
               hideDrawerButton={true} 
-              hideNavBar={true} 
+              hideNavBar={true}
               >
-            <Scene
-              onEnter={() => Actions.drawerOpen()}
-              title="WES - IT" 
-              navigationBarStyle={{backgroundColor: "#3f51b5"}}
-              titleStyle={{ color: "white"}}
-              key="qr-reader" 
-              initial={true}  
-              component={QrReader}
-              />
-              </Scene>
-            <Scene key="files" component={Files}/>
+              <Scene
+                renderLeftButton={handleLeftButton}
+                title="WES - IT" 
+                navigationBarStyle={{backgroundColor: "#3f51b5"}}
+                titleStyle={{ color: "white"}}
+                key="qr-reader"   
+                component={QrReader}
+                />
+            </Scene>
+            <Scene 
+              hideDrawerButton={true} 
+              hideNavBar={true} 
+              key="home" initial={true} component={Home}/>
           </Stack>
         </Router>
         

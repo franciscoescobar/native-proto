@@ -1,5 +1,5 @@
 import React from 'react';
-import {Linking} from 'react-native';
+import {Linking, View} from 'react-native';
 import {StyledText, StyledView, StyledIcon, StyledFlatList, StyledTouchable} from './styled';
 const List: () => React$Node = ({data}) => {
     const url = "https://www.wikipedia.org/";
@@ -22,9 +22,10 @@ const List: () => React$Node = ({data}) => {
                 {key: 'Jimmy.pdf'},
                 {key: 'Julie.pdf'},
             ]}
-            renderItem={({item}) => <StyledTouchable onPress={handleOnItemPress}><StyledIcon name={item.icon || "file-pdf-o"} size={18} color={item.color || "#ff0000"} /><StyledText>{item.key}</StyledText></StyledTouchable>}
+            renderItem={({item}) => <StyledTouchable onPress={handleOnItemPress}><StyledIcon name={item.icon || "file-pdf-o"} size={18} color={item.color || "#ff4c4c"} /><StyledText>{item.key}</StyledText></StyledTouchable>}
             />
-            </StyledView>
+            <View style={{ flex: 1, borderBottomWidth: 1, borderBottomColor: "#cbcbcb"}}></View>
+        </StyledView>
         </>
     );
 };

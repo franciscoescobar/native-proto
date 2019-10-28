@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-export const StyledTouchable = styled.TouchableHighlight`
+
+export const StyledTouchable = styled.TouchableHighlight` 
     display: flex;
     justify-content: center;
     align-items: center;
