@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import Pdf from 'react-native-pdf';
-const PdfView: () => React$Node = () => {
+const PdfView: () => React$Node = ({url}) => {
 
-    const source = {uri:'https://web.stanford.edu/group/moler/theses/JWGThesis.pdf',cache:true};
+    const source = {uri: url || 'https://web.stanford.edu/group/moler/theses/JWGThesis.pdf',cache:true};
 
     return (
         <>

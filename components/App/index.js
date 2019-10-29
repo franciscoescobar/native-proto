@@ -45,7 +45,9 @@ const App: () => React$Node = () => {
               key="pdf-view"
               component={PdfView}
               navBarButtonColor = "#fff"
-              title="WES - IT" 
+              title="WES - IT"
+              onLeft={() => {}}
+              onBack={() => {Actions.replace("qr-reader"); }}
               navigationBarStyle={{backgroundColor: "#3f51b5"}}
               titleStyle={{ color: "white"}}
               />
