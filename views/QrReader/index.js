@@ -21,7 +21,7 @@ const QrReader: () => React$Node = () => {
         reactivate={true}
         topContent={
           <CenterText>
-            Scan<TextBold> the product</TextBold> you want so you can read the pdf.
+            Scan<TextBold> the QR code</TextBold> you want so you can read the pdf.
           </CenterText>
         }
         bottomContent={
