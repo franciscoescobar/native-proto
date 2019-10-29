@@ -8,13 +8,13 @@ const Logo: () => React$Node = () => {
             fadeAnim,
             {
               toValue: 1,
-              duration: 3000,
+              duration: 2500,
             }
           ).start(() => {Actions.replace("qr-reader")});
     }, [])
     return (
         <>
-            <Animated.Image style={{width: 300, height: 100, opacity: fadeAnim}} source={{uri: "http://pngimg.com/uploads/google/google_PNG19644.png"}}></Animated.Image>
+            <Animated.Image style={{width: 300, height: 150, opacity: fadeAnim}} source={{uri: "http://pngimg.com/uploads/arctic_fox/arctic_fox_PNG41373.png"}}></Animated.Image>
         </>
     );
 };

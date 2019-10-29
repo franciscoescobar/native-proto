@@ -5,6 +5,7 @@ import { Router, Stack, Scene, Actions } from 'react-native-router-flux';
 import { StyledIcon } from './styled';
 import DrawerContent from '../DrawerContent';
 import Home from '../../views/Home';
+import PdfView from '../../views/PdfView';
 const App: () => React$Node = () => {
 
   const handleLeftButton = () => (
@@ -40,6 +41,14 @@ const App: () => React$Node = () => {
               hideDrawerButton={true} 
               hideNavBar={true} 
               key="home" initial={true} component={Home}/>
+            <Scene 
+              key="pdf-view"
+              component={PdfView}
+              navBarButtonColor = "#fff"
+              title="WES - IT" 
+              navigationBarStyle={{backgroundColor: "#3f51b5"}}
+              titleStyle={{ color: "white"}}
+              />
           </Stack>
         </Router>
         
