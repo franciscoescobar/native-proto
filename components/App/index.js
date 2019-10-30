@@ -37,17 +37,16 @@ const App: () => React$Node = () => {
                 component={QrReader}
                 />
             </Scene>
-            <Scene 
+            <Scene
               hideDrawerButton={true} 
               hideNavBar={true} 
               key="home" initial={true} component={Home}/>
             <Scene 
               key="pdf-view"
               component={PdfView}
+              backButtonTextStyle = "#fff"
               navBarButtonColor = "#fff"
               title="WES - IT"
-              onLeft={() => {}}
-              onBack={() => {Actions.replace("qr-reader"); }}
               navigationBarStyle={{backgroundColor: "#3f51b5"}}
               titleStyle={{ color: "white"}}
               />

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Dimensions} from 'react-native';
+import {View, StyleSheet, Dimensions, BackHandler } from 'react-native';
 import Pdf from 'react-native-pdf';
 const PdfView: () => React$Node = ({url}) => {
 
