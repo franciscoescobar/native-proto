@@ -18,7 +18,11 @@ export const StyledText = styled.Text`
     text-align: center;
     font-size: 16px;    
 `;
-
+export const Divider = styled.View`
+  flex: 1;
+  border-bottom-width: 1; 
+  border-bottom-color: #cbcbcb;
+`;
 
 export const StyledView = styled.View`
 `;
